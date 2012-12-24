@@ -9,4 +9,5 @@ run:
 	@find lib -name *.coffee | xargs rm
 
 test: run
+	# Testing begins
 	@node_modules/.bin/nodeunit test
