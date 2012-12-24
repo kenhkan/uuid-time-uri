@@ -10,7 +10,6 @@
   },
   "main": "lib/UriMaker.js",
   "dependencies": {
-    "coffee-script": ">=1.3.3",
     "underscore": ">=1.4.3",
     "encdec": ">=0.1.1"
   },
