@@ -11,6 +11,7 @@ Install
 ====================
 
 ```
+npm install coffee-script -g
 npm install uuid-time-uri
 ```
 
