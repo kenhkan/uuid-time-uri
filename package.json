@@ -11,7 +11,7 @@
   "main": "lib/UriMaker.js",
   "dependencies": {
     "underscore": ">=1.4.3",
-    "encdec": ">=0.1.1"
+    "encdec": "https://github.com/kenhkan/node-encdec/tarball/master"    
   },
   "devDependencies": {
     "nodeunit": ">=0.6.0"    

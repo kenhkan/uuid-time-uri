@@ -11,3 +11,8 @@ run:
 test: run
 	# Testing begins
 	@node_modules/.bin/nodeunit test
+
+clean:
+	# Removing build files
+	@rm -r lib
+	@rm -rf node_modules

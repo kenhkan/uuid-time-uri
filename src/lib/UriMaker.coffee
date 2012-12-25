@@ -1,5 +1,11 @@
+# Make URI from UUID and Time
+#
+# Copyright (c) 2012 Kenneth Kan
+# [MIT License](http://opensource.org/licenses/mit-license.php)
+
 encdec = require("encdec")
 _ = require("underscore")
+root = {}
 
 # The "definition", or how much of the original is retained, of the UUID
 # provided. This can only be from 1 to 32.
@@ -48,7 +54,7 @@ encoder = encdec.create("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
 # Configure the maker. See README for more detail
 #
 # @param options A hash containing all options
-exports.configure = (options) ->
+root.configure = (options) ->
   if _.isObject(options)
     for own key, value of options
       switch key
@@ -72,7 +78,7 @@ exports.configure = (options) ->
 #
 # @param {String} uuid The UUID (with or without dashes)
 # @param {Number} time UNIX timestamp in milliseconds
-exports.make = (uuid, time) ->
+root.make = (uuid, time) ->
   return unless _.isString(uuid) and _.isNumber(time)
 
   # Preparation
@@ -84,3 +90,17 @@ exports.make = (uuid, time) ->
   back = encoder.encode(time)
 
   "#{prefix}#{front}#{back}"
+
+
+## Interface ##
+
+loadPublic = (object) ->
+  for own key, func of root
+    object[key] = func
+
+if _.isObject(module?.exports)
+  module.exports = root
+else if _.isObject(window)
+  loadPublic(window)
+else
+  loadPublic(this)
