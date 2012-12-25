@@ -95,8 +95,9 @@ root.make = (uuid, time) ->
 ## Interface ##
 
 loadPublic = (object) ->
+  object.utUri = {}
   for own key, func of root
-    object[key] = func
+    object.utUri[key] = func
 
 if _.isObject(module?.exports)
   module.exports = root
