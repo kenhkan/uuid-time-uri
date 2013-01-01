@@ -1,7 +1,7 @@
 {
   "name": "uuid-time-uri",
   "description": "Create a short URI based on UUID and current time",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Kenneth Kan <kenhkan@gmail.com>",
   "homepage": "https://github.com/kenhkan/uuid-time-uri",
   "repository": {

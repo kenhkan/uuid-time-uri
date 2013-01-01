@@ -46,7 +46,7 @@ decoder = encdec.create("0123456789ABCDEF")
 #
 # @private
 # @type encdec
-encoder = encdec.create("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-._~")
+encoder = encdec.create("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz$-.+!'(),")
 
 
 ## Public functions ##
