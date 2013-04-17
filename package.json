@@ -1,27 +1,26 @@
-{
-  "name": "uuid-time-uri",
-  "description": "Create a short URI based on UUID and current time",
-  "version": "0.1.3",
-  "author": "Kenneth Kan <kenhkan@gmail.com>",
-  "homepage": "https://github.com/kenhkan/uuid-time-uri",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kenhkan/uuid-time-uri.git"
-  },
-  "main": "lib/UriMaker.js",
-  "dependencies": {
-    "underscore": ">=1.4.x",
-    "encdec": "0.1.x"
-  },
-  "devDependencies": {
-    "nodeunit": ">=0.6.0",
-    "coffee-script": "1.6.x" 
-  },  
-  "engine": {
-    "node": ">=0.6.0"
-  },
-  "scripts": {
-    "test": "make test",
-    "postinstall": "make"
+{ "name": "uuid-time-uri"
+, "description": "Create a short URI based on UUID and current time"
+, "version": "0.1.4"
+, "author": "Kenneth Kan <kenhkan@gmail.com>"
+, "homepage": "https://github.com/kenhkan/uuid-time-uri"
+, "repository":
+  { "type": "git"
+  , "url": "https://github.com/kenhkan/uuid-time-uri.git"
+  }
+, "main": "lib/UriMaker.js"
+, "dependencies":
+  { "coffee-script": "1.6.x"
+  , "underscore": ">=1.4.x"
+  , "encdec": "0.1.x"
+  }
+, "devDependencies":
+  { "nodeunit": ">=0.6.0"
+  }
+, "engine":
+  { "node": ">=0.6.0"
+  }
+, "scripts":
+  { "test": "make test"
+  , "postinstall": "make"
   }
 }
