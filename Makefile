@@ -2,11 +2,7 @@ run:
 	# Setup directory structure
 	@cp -r src/* .
 	# Compile
-	@coffee -c .
-	# Remove unnecessary files
-	@find src -name *.js | xargs rm
-	@find test -name *.js | xargs rm
-	@find lib -name *.coffee | xargs rm
+	@node_modules/coffee-script/bin/coffee -c .
 
 test: run
 	# Testing begins
@@ -14,5 +10,8 @@ test: run
 
 clean:
 	# Removing build files
-	@rm -r lib
+	@rm -rf lib
 	@rm -rf node_modules
+	# Remove unnecessary files
+	@find src -name *.js | xargs rm
+	@find test -name *.js | xargs rm
